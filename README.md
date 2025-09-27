@@ -70,6 +70,58 @@ python Subhunter.py -d example.com -o results.txt -w n0kovo_subdomains_huge.txt
 
 ---
 
+## API Configuration
+
+Some data sources in Subhunter require API keys. You can supply these by creating a YAML configuration file.
+
+**The default configuration file name is `config.yaml`.**
+
+### Example `config.yaml`:
+
+```yaml
+shodan:
+  api_key: "YOUR_SHODAN_API_KEY"
+bevigil:
+  api_key: "YOUR_BEVIGIL_API_KEY"
+digitalyama:
+  api_key: "YOUR_DIGITALYAMA_API_KEY"
+dnsdumpster:
+  api_key: "YOUR_DNSDUMPSTER_API_KEY"
+fullhunt:
+  api_key: "YOUR_FULLHUNT_API_KEY"
+leakix:
+  api_key: "YOUR_LEAKIX_API_KEY"
+netlas:
+  api_key: "YOUR_NETLAS_API_KEY"
+pugrecon:
+  api_key: "YOUR_PUGRECON_API_KEY"
+rsecloud:
+  api_key: "YOUR_RSECLOUD_API_KEY"
+securitytrails:
+  api_key: "YOUR_SECURITYTRAILS_API_KEY"
+virustotal:
+  api_key: "YOUR_VIRUSTOTAL_API_KEY"
+google:
+  api_key: "YOUR_GOOGLE_API_KEY"
+```
+
+- Replace each `"YOUR_..._API_KEY"` with your actual API key for that service.
+- You can leave any unused API key field blank, or remove it entirely if you don't have an account for that service.
+- The config file must be valid YAML format.
+
+### How to Use
+
+Run Subhunter with the `-c` or `--config` option and supply your config file (default: `config.yaml`):
+
+```bash
+python Subhunter.py -d example.com -o results.txt -c config.yaml
+```
+
+**Note:**  
+- You only need to include the APIs you have keys for; the others can be omitted.
+
+---
+
 ## Usage
 
 ```bash
@@ -81,7 +133,7 @@ python Subhunter.py -d <target_domain> -o <output_file.txt> [options]
 - `-d`, `--target`      : Target domain (**required**)
 - `-o`, `--output`      : Output file name (**required**)
 - `-w`, `--wordlist`    : Wordlist file for brute-force fuzzing
-- `-c`, `--config`      : YAML config file with API keys for supported services
+- `-c`, `--config`      : YAML config file with API keys for supported services (default: `config.yaml`)
 - `--proxy`             : HTTP/HTTPS proxy (e.g., http://127.0.0.1:8080)
 - `-mc`                 : Match status code for fuzzing (default: 200)
 - `-t`                  : Timeout for requests (default: 20)
@@ -104,7 +156,7 @@ python Subhunter.py -d example.com -o results.txt -w n0kovo_subdomains_huge.txt
 
 **With API Config:**
 ```bash
-python Subhunter.py -d example.com -o results.txt -c apis.yaml
+python Subhunter.py -d example.com -o results.txt -c config.yaml
 ```
 
 **Using Proxy and Custom Timeout:**
@@ -120,6 +172,7 @@ python Subhunter.py -d example.com -o results.txt --proxy http://127.0.0.1:8080 
   Choose one mode per run.
 - For best results, use your own API keys for supported services (Shodan, SecurityTrails, etc.) in a YAML config file.
 - Ensure that the Chromium and Chromium Driver versions match your installed browser.
+- **It's preferred to filter the output file for duplicates** to ensure each subdomain appears only once in the results.
 
 ---
 
