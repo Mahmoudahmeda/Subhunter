@@ -215,18 +215,17 @@ class APIs:
             self.shodan(self.config['shodan']['api_key'],target)
             self.bevigil(self.config['bevigil']['api_key'],target)
             self.digitalyama(self.config['digitalyama']['api_key'],target)
-            #self.dnsdumpster(self.config['dnsdumpster']['api_key'],target)
-            #self.fullhunt(self.config['fullhunt']['api_key'],target)
-            #self.leakix(self.config['leakix']['api_key'],target)
-            #self.netlas(self.config['netlas']['api_key'],target)
-            #self.pugrecon(self.config['pugrecon']['api_key'],target)
-            #self.rsecloud(self.config["rsecloud"]["api_key"],target)
-            #self.securitytrails(self.config["securitytrails"]["api_key"],target)
-            #self.virustotal(self.config["virustotal"]["api_key"],target)
-            #self.google(self.config['google']['api_key'],target)
+            self.dnsdumpster(self.config['dnsdumpster']['api_key'],target)
+            self.fullhunt(self.config['fullhunt']['api_key'],target)
+            self.leakix(self.config['leakix']['api_key'],target)
+            self.netlas(self.config['netlas']['api_key'],target)
+            self.pugrecon(self.config['pugrecon']['api_key'],target)
+            self.rsecloud(self.config["rsecloud"]["api_key"],target)
+            self.securitytrails(self.config["securitytrails"]["api_key"],target)
+            self.virustotal(self.config["virustotal"]["api_key"],target)
+            self.google(self.config['google']['api_key'],target)
         
-        except Exception:
-            print("Check you api's credits and config file") 
+        except Exception: 
             pass
 
     def api_config(self,config):
