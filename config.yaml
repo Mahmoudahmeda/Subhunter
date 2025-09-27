@@ -1,0 +1,56 @@
+shodan:
+  api_key: 
+
+bevigil:
+  api_key: 
+
+chaos:
+  api_key: 
+
+digitalyama:
+  api_key: 
+
+dnsdumpster:
+  api_key: 
+
+fullhunt:
+  api_key: 
+
+intelx:
+  api_key: 
+
+leakix:
+  api_key: 
+
+netlas:
+  api_key: 
+
+pugrecon:
+  api_key: 
+
+rsecloud:
+  api_key: 
+
+securitytrails:
+  api_key: 
+
+threatbook:
+  api_key: 
+
+zoomeye:
+  api_key: 
+
+criminalip:
+  api_key: 
+
+publicwww:
+  api_key: 
+
+hunterhow:
+  api_key: 
+
+virustotal:
+  api_key: 
+
+google:
+  api_key: 
