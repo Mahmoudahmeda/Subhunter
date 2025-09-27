@@ -55,6 +55,21 @@ sudo apt install chromium chromium-driver
 
 ---
 
+## Subdomain Wordlist
+
+For brute-force or fuzzing mode, you need a subdomain wordlist.
+
+- You can use any wordlist you like, but for best results, a large and comprehensive list is recommended.
+- I have used [`n0kovo_subdomains_huge.txt`](https://github.com/n0kovo/n0kovo_subdomains/blob/main/n0kovo_subdomains_huge.txt) as a reference wordlist.
+- You can find it and other quality lists in the [n0kovo/n0kovo_subdomains](https://github.com/n0kovo/n0kovo_subdomains) repository.
+
+**Example:**
+```bash
+python Subhunter.py -d example.com -o results.txt -w n0kovo_subdomains_huge.txt
+```
+
+---
+
 ## Usage
 
 ```bash
@@ -84,7 +99,7 @@ python Subhunter.py -d example.com -o results.txt
 
 **With Wordlist Fuzzing:**
 ```bash
-python Subhunter.py -d example.com -o results.txt -w subdomains.txt
+python Subhunter.py -d example.com -o results.txt -w n0kovo_subdomains_huge.txt
 ```
 
 **With API Config:**
@@ -110,7 +125,7 @@ python Subhunter.py -d example.com -o results.txt --proxy http://127.0.0.1:8080 
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
