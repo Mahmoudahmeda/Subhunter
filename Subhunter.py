@@ -505,7 +505,7 @@ if __name__ == "__main__":
     args.add_argument("--httpx",help="use httpx to check for live subdomains",action="store_true",required=False)
     args.add_argument('--delay',help="delay between requests (default is 5 second)",metavar='',required=False,default=5.0)
     args.add_argument("--bin",help="Path to Chromium binary (default: /usr/local/bin/chromium )",default="/usr/local/bin/chromium",required=False)
-    args.add_argument("--driver",help="Path to Chrome Driver Path (default: /usr/local/bin/chromedriver )",default="/usr/local/bin/chromeriver",required=False)
+    args.add_argument("--driver",help="Path to Chrome Driver Path (default: /usr/local/bin/chromedriver )",default="/usr/local/bin/chromedriver",required=False)
     arg = args.parse_args()
 
     Target = arg.target
