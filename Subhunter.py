@@ -467,17 +467,18 @@ class Subhunter:
   
     def output(self,out_name,target,httpx=False):
         
-        subdomains = list({subdomain for subdomain in subs if subdomain})
-        sub = []
+        sub = set()
 
-        for i in subdomains:
+        for i in subs:
 
             if not i.endswith(target):
-                sub.append(f"{i.rstrip('.')}.{target}")
+                sub.add(f"{i.rstrip('.')}.{target}")
                 print(i.rstrip('.')+target)
             else:
-                sub.append(i)
+                sub.add(i)
                 print(i)
+
+        sub = sorted(sub)
 
         if httpx == True:
             # Write subs to a temporary file for httpx input
@@ -486,7 +487,6 @@ class Subhunter:
                 f.writelines(f"{sub}\n" for sub in sub)
             os.system(f"httpx -l {temp_file} -o {out_name} -silent -mc {mc} -p 80,443,8080,8443")
             os.remove(temp_file)
-
         else:
             with open(f'{out_name}', 'a') as output:
                 output.writelines(f"{sub}\n" for sub in sub)

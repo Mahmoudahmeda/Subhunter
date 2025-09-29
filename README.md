@@ -1,5 +1,16 @@
 # Subhunter
 
+```ascii
+ _____ _   _______      _   _ _   _ _   _ _____ ___________ 
+/  ___| | | | ___ \    | | | | | | | \ | |_   _|  ___| ___ \ 
+\ `--.| | | | |_/ /_  _| |_| | | | |  \| | | | | |__ | |_/ /
+ `--. \ | | | ___ \ \/ /  _  | | | | . ` | | | |  __||    / 
+/\__/ / |_| | |_/ />  <| | | | |_| | |\  | | | | |___| |\ \ 
+\____/ \___/\____//_/\_\_| |_/\___/\_| \_/ \_/ \____/\_| \_|
+                                                            
+    Subxhunter - Subdomain Enumeration Tool by Mahmoud Ahmed
+```
+
 **Subhunter** is a powerful subdomain enumeration tool that aggregates subdomains from multiple sources, including public search engines, APIs, and wordlist-based fuzzing. It supports scraping, API integration, and browser automation (using Selenium and Chromium) for comprehensive subdomain discovery.
 
 ---
