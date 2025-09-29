@@ -495,14 +495,14 @@ class Subhunter:
 if __name__ == "__main__":
 
     print("""
- _____ _   _______      _   _ _   _ _   _ _____ ___________ 
-/  ___| | | | ___ \    | | | | | | | \ | |_   _|  ___| ___ \ 
-\ `--.| | | | |_/ /_  _| |_| | | | |  \| | | | | |__ | |_/ /
- `--. \ | | | ___ \ \/ /  _  | | | | . ` | | | |  __||    / 
-/\__/ / |_| | |_/ />  <| | | | |_| | |\  | | | | |___| |\ \ 
-\____/ \___/\____//_/\_\_| |_/\___/\_| \_/ \_/ \____/\_| \_|
-                                                            
-    Subxhunter - Subdomain Enumeration Tool by Mahmoudahmed\n""")
+     _____ _   _______      _   _ _   _ _   _ _____ ___________ 
+    /  ___| | | | ___ \    | | | | | | | \ | |_   _|  ___| ___ \ 
+    \ `--.| | | | |_/ /_  _| |_| | | | |  \| | | | | |__ | |_/ /
+     `--. \ | | | ___ \ \/ /  _  | | | | . ` | | | |  __||    / 
+    /\__/ / |_| | |_/ />  <| | | | |_| | |\  | | | | |___| |\ \ 
+    \____/ \___/\____//_/\_\_| |_/\___/\_| \_/ \_/ \____/\_| \_|
+                                                                
+        Subxhunter - Subdomain Enumeration Tool by Mahmoudahmed\n""")
 
 
     args = argparse.ArgumentParser(description="Subhunter - Subdomain Enumeration Tool",usage='%(prog)s [options] -d domain -o output.txt',epilog="Example: python Subhunter.py -d example.com -o output.txt --httpx")
