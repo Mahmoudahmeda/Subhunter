@@ -477,9 +477,7 @@ class Subhunter:
             else:
                 sub.add(i)
                 print(i)
-
-        sub = sorted(sub)
-
+        
         if httpx == True:
             # Write subs to a temporary file for httpx input
             temp_file = "http_temp.txt"
