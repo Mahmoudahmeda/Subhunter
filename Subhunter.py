@@ -473,10 +473,10 @@ class Subhunter:
 
             if not i.endswith(target):
                 sub.add(f"{i.rstrip('.')}.{target}")
-                print(i.rstrip('.')+target)
+                print(colorama.Fore.GREEN+i.rstrip('.')+target)
             else:
                 sub.add(i)
-                print(i)
+                print(colorama.Fore.GREEN+i)
         
         if httpx == True:
             # Write subs to a temporary file for httpx input
