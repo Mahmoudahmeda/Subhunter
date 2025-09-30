@@ -500,7 +500,7 @@ if __name__ == "__main__":
         /\__/ / |_| | |_/ />  <| | | | |_| | |\  | | | | |___| |\ \ 
         \____/ \___/\____//_/\_\_| |_/\___/\_| \_/ \_/ \____/\_| \_|
                                                                 
-            Subxhunter - Subdomain Enumeration Tool by Mahmoudahmed\n
+            Subxhunter - Subdomain Enumeration Tool by Mahmoudahmed
     """)
 
 
