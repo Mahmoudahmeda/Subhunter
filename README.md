@@ -11,7 +11,7 @@
     Subxhunter - Subdomain Enumeration Tool by Mahmoud Ahmed
 ```
 
-**Subhunter** is a powerful subdomain enumeration tool that aggregates subdomains from multiple sources, including public search engines, APIs, and wordlist-based fuzzing. It supports scraping, API integration, and browser automation (using Selenium and Chromium) for comprehensive subdomain discovery.
+**Subhunter** is a  subdomain enumeration tool that aggregates subdomains from multiple sources, including public search engines, APIs, and wordlist-based fuzzing. It supports scraping, API integration, and browser automation (using Selenium and Chromium) for comprehensive subdomain discovery.
 
 ---
 
