@@ -512,7 +512,7 @@ if __name__ == "__main__":
     """)
 
 
-    args = argparse.ArgumentParser(description="Subhunter - Subdomain Enumeration Tool",usage='%(prog)s [options] -d domain -o output.txt',epilog="Example: python Subhunter.py -d example.com -o output.txt --httpx")
+    args = argparse.ArgumentParser(description="Subhunter - Subdomain Enumeration Tool",usage='%(prog)s [options] -d domain -o output.txt',epilog="Example: python Subhunter.py -d example.com -o output.txt")
     args.add_argument('-w','--wordlist',help="wordlist to Fuzz",metavar='',required=False,)
     args.add_argument("-d",'--target',help="target domain",metavar='',required=True)
     args.add_argument('-o','--output',help="Output file name: example.txt",metavar='',required=True)
