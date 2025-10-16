@@ -36,18 +36,23 @@
 
 Before using Subhunter, ensure the following dependencies are installed on your system:
 
-### 1. Python Packages
+### Linux
+
+you can run the installer.sh file and it will install all the requirements
+
+```bash
+chmod +x installer.sh
+sudo ./installer.sh
+```
+
+### Windows
+
+**1. Python Packages**
 
 Install required Python modules using pip:
 
 ```bash
 pip install -r requirements.txt
-```
-
-**Or install manually:**
-
-```bash
-pip install requests beautifulsoup4 pyyaml colorama selenium
 ```
 
 ### 2. Chromium and Chromium Driver
@@ -57,11 +62,7 @@ Subhunter relies on headless browser automation via Selenium.
 
 **Install them using:**
 
-```bash
-sudo apt update
-sudo apt install chromium chromium-driver
-```
-
+you can install them from [Chromium](https://googlechromelabs.github.io/chrome-for-testing/)
 - On some systems, the packages might be named `chromium-browser` and `chromium-chromedriver`.
 
 ---
