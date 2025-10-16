@@ -16,6 +16,7 @@ proxies= {}
 subs=[]
 path = None
 
+
 class Default:
 
     headers = {
@@ -490,7 +491,14 @@ class Subhunter:
                 output.writelines(f"{sub}\n" for sub in sub)
 
 
+def OS():
+    plat=platform.system()
+    print(plat)
+
+
 if __name__ == "__main__":
+
+    plat = OS()
 
     print(r"""
          _____ _   _______      _   _ _   _ _   _ _____ ___________ 
@@ -514,8 +522,14 @@ if __name__ == "__main__":
     args.add_argument('--proxy',help="proxy to use: https:// , http://",metavar='',type=str,required=False)
     args.add_argument("--httpx",help="use httpx to check for live subdomains",action="store_true",required=False)
     args.add_argument('--delay',help="delay between requests (default is 5 second)",metavar='',required=False,default=5.0)
-    args.add_argument("--bin",help="Path to Chromium binary (default: /usr/bin/chromium )",default="/usr/bin/chromium",required=False,metavar="")
-    args.add_argument("--driver",help="Path to Chrome Driver Path (default: /usr/bin/chromedriver )",default="/usr/bin/chromedriver",required=False,metavar="")
+    
+    if plat == "linux":
+        args.add_argument("--bin",help="Path to Chromium binary (default: /usr/bin/chromium )",default="/usr/bin/chromium",required=False,metavar="")
+        args.add_argument("--driver",help="Path to Chrome Driver Path (default: /usr/bin/chromedriver )",default="/usr/bin/chromedriver",required=False,metavar="")
+    else:
+        args.add_argument("--bin",help="Path to Chromium binary",required=True,metavar="")
+        args.add_argument("--driver",help="Path to Chrome Driver Path",required=True,metavar="")
+    
     arg = args.parse_args()
 
     Target = arg.target
