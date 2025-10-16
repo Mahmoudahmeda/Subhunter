@@ -493,7 +493,7 @@ class Subhunter:
 
 def OS():
     plat=platform.system()
-    print(plat)
+    return plat
 
 
 if __name__ == "__main__":
